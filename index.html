@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Website</title>
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Add custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Add Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to Aarav Yadav's Website</h1>
+  </header>
+  
+  <main>
+    <div class="accordion" id="accordionSections">
+      <div class="card">
+        <div class="card-header" id="aboutHeading">
+          <h2 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#aboutCollapse" aria-expanded="true" aria-controls="aboutCollapse">
+              About Me
+            </button>
+          </h2>
+        </div>
+        <div id="aboutCollapse" class="collapse show" aria-labelledby="aboutHeading" data-parent="#accordionSections">
+          <div class="card-body">
+            <p>
+              Hello, I'm Aarav Yadav, and this is my personal website. I'm passionate about Computer Science and Virtual Reality. 
+              Here, you can find information about my background, experience, and projects.
+            </p>
+      
+            <div class="social-media-buttons">
+              <a href="https://github.com/username" target="_blank" class="btn btn-lg btn-primary"><i class="fab fa-github"></i></a>
+              <a href="https://linkedin.com/in/username" target="_blank" class="btn btn-lg btn-primary"><i class="fab fa-linkedin"></i></a>
+              <!-- Add more social media icons as needed -->
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="card">
+        <div class="card-header" id="projectsHeading">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#projectsCollapse" aria-expanded="false" aria-controls="projectsCollapse">
+              Projects
+            </button>
+          </h2>
+        </div>
+        <div id="projectsCollapse" class="collapse" aria-labelledby="projectsHeading" data-parent="#accordionSections">
+          <div class="card-body">
+            <div class="card">
+              <div class="card-header" id="androidProjectsHeading">
+                <h3 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#androidProjectsCollapse" aria-expanded="false" aria-controls="androidProjectsCollapse">
+                    Android Projects
+                  </button>
+                </h3>
+              </div>
+              <div id="androidProjectsCollapse" class="collapse" aria-labelledby="androidProjectsHeading" data-parent="#projectsCollapse">
+                <div class="card-body">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Cookie Clicker</h5>
+                        <div>
+                          <!-- <a href="https://github.com/username/project1" target="_blank" class="btn btn-primary mr-2">GitHub</a> -->
+              <a href="https://github.com/username" target="_blank" class="btn btn-lg btn-primary"><i class="fab fa-github"></i></a>
+
+                          <!-- <button class="btn btn-primary" data-toggle="collapse" data-target="#videoCollapse1" aria-expanded="false" aria-controls="videoCollapse1">Demo Video</button> -->
+                          <button class="btn btn-lg btn-primary" data-toggle="collapse" data-target="#videoCollapse1" aria-expanded="false" aria-controls="videoCollapse1">
+                            <i class="fab fa-youtube"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div id="videoCollapse1" class="collapse" data-parent="#androidProjectsCollapse">
+                        <div class="video-container">
+                          <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Weather App</h5>
+                        <div>
+              <a href="https://github.com/username" target="_blank" class="btn btn-lg btn-primary"><i class="fab fa-github"></i></a>
+              <!-- <a href="https://github.com/username/project1" target="_blank" class="btn btn-primary mr-2">GitHub</a> -->
+                          <!-- <button class="btn btn-primary" data-toggle="collapse" data-target="#videoCollapse2" aria-expanded="false" aria-controls="videoCollapse2">Demo Video</button> -->
+                          <button class="btn btn-lg btn-primary" data-toggle="collapse" data-target="#videoCollapse2" aria-expanded="false" aria-controls="videoCollapse2">
+                            <i class="fab fa-youtube"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div id="videoCollapse2" class="collapse" data-parent="#androidProjectsCollapse">
+                        <div class="video-container">
+                          <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Hyrule Compendium</h5>
+                        <div>
+              <a href="https://github.com/username" target="_blank" class="btn btn-lg btn-primary"><i class="fab fa-github"></i></a>
+              <!-- <a href="https://github.com/username/project1" target="_blank" class="btn btn-primary mr-2">GitHub</a> -->
+                          <!-- <button class="btn btn-primary" data-toggle="collapse" data-target="#videoCollapse3" aria-expanded="false" aria-controls="videoCollapse3">Demo Video</button> -->
+                          <button class="btn btn-lg btn-primary" data-toggle="collapse" data-target="#videoCollapse3" aria-expanded="false" aria-controls="videoCollapse3">
+                            <i class="fab fa-youtube"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div id="videoCollapse3" class="collapse" data-parent="#androidProjectsCollapse">
+                        <div class="video-container">
+                          <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </li>
+                    <!-- Add the remaining Android projects -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+      
+            <div class="card">
+              <div class="card-header" id="unityProjectsHeading">
+                <h3 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#unityProjectsCollapse" aria-expanded="false" aria-controls="unityProjectsCollapse">
+                    Unity Projects
+                  </button>
+                </h3>
+              </div>
+              <div id="unityProjectsCollapse" class="collapse" aria-labelledby="unityProjectsHeading" data-parent="#projectsCollapse">
+                <div class="card-body">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Simple Run Game</h5>
+                        <div>
+              <a href="https://github.com/username" target="_blank" class="btn btn-lg btn-primary"><i class="fab fa-github"></i></a>
+              <!-- <a href="https://github.com/username/project4" target="_blank" class="btn btn-primary mr-2">GitHub</a> -->
+                          <!-- <button class="btn btn-primary" data-toggle="collapse" data-target="#videoCollapse4" aria-expanded="false" aria-controls="videoCollapse4">Demo Video</button> -->
+                          <button class="btn btn-lg btn-primary" data-toggle="collapse" data-target="#videoCollapse4" aria-expanded="false" aria-controls="videoCollapse4">
+                            <i class="fab fa-youtube"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div id="videoCollapse4" class="collapse" data-parent="#unityProjectsCollapse">
+                        <div class="video-container">
+                          <iframe src="https://www.youtube.com/embed/VIDEO_ID_4" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">2D Mini Platformer</h5>
+                        <div>
+              <a href="https://github.com/username" target="_blank" class="btn btn-lg btn-primary"><i class="fab fa-github"></i></a>
+              <!-- <a href="https://github.com/username/project4" target="_blank" class="btn btn-primary mr-2">GitHub</a> -->
+                          <!-- <button class="btn btn-primary" data-toggle="collapse" data-target="#videoCollapse5" aria-expanded="false" aria-controls="videoCollapse5">Demo Video</button> -->
+                          <button class="btn btn-lg btn-primary" data-toggle="collapse" data-target="#videoCollapse5" aria-expanded="false" aria-controls="videoCollapse5">
+                            <i class="fab fa-youtube"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div id="videoCollapse5" class="collapse" data-parent="#unityProjectsCollapse">
+                        <div class="video-container">
+                          <iframe src="https://www.youtube.com/embed/VIDEO_ID_5" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </li>
+                    <!-- Add the remaining Unity projects -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+      
+            <div class="card">
+              <div class="card-header" id="vrProjectsHeading">
+                <h3 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#vrProjectsCollapse" aria-expanded="false" aria-controls="vrProjectsCollapse">
+                    VR Projects
+                  </button>
+                </h3>
+              </div>
+              <div id="vrProjectsCollapse" class="collapse" aria-labelledby="vrProjectsHeading" data-parent="#projectsCollapse">
+                <div class="card-body">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Zombie Escape</h5>
+                        <div>
+                          <a href="https://github.com/username" target="_blank" class="btn btn-lg btn-primary"><i class="fab fa-github"></i></a>
+                          <!-- <a href="https://github.com/username/project6" target="_blank" class="btn btn-primary mr-2">GitHub</a> -->
+                          <button class="btn btn-lg btn-primary" data-toggle="collapse" data-target="#videoCollapse6" aria-expanded="false" aria-controls="videoCollapse6">
+                            <i class="fab fa-youtube"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div id="videoCollapse6" class="collapse" data-parent="#vrProjectsCollapse">
+                        <div class="video-container">
+                          <iframe src="https://www.youtube.com/embed/VIDEO_ID_6" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </li>
+                    <!-- Add the remaining VR projects -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="card">
+        <div class="card-header" id="educationHeading">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#educationCollapse" aria-expanded="false" aria-controls="educationCollapse">
+              Education
+            </button>
+          </h2>
+        </div>
+        <div id="educationCollapse" class="collapse" aria-labelledby="educationHeading" data-parent="#accordionSections">
+          <div class="card-body">
+            <ul class="list-group">
+              <li class="list-group-item">Upcoming Graduating Class of 2024 from South Brunswick High School</li>
+              <!-- <li class="list-group-item">Bachelor of Computer Science - XYZ University</li>
+              <li class="list-group-item">Master of Science in Virtual Reality - ABC University</li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-header" id="certificationsHeading">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#certificationsCollapse" aria-expanded="false" aria-controls="certificationsCollapse">
+              Certifications
+            </button>
+          </h2>
+        </div>
+        <div id="certificationsCollapse" class="collapse" aria-labelledby="certificationsHeading" data-parent="#accordionSections">
+          <div class="card-body">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="mb-0">Certified User: VR Developer</h5>
+                  <div>
+                    <a href="https://unity.com/products/unity-certifications/vr-developer" class="btn btn-primary mr-2" target="_blank"><i class="fab fa-unity"></i></a>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="mb-0">Certified User: Programmer</h5>
+                  <div>
+                    <a href="https://unity.com/products/unity-certifications/user-programmer" class="btn btn-primary mr-2"target="_blank"><i class="fab fa-unity"></i></a>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="mb-0">Certified User: Artist</h5>
+                  <div>
+                    <a href="https://certiport.pearsonvue.com/Certifications/Unity/Certified-User/Certify" class="btn btn-primary mr-2"target="_blank"><i class="fab fa-unity"></i></a>
+                  </div>
+                </div>
+              </li>
+              <!-- Add the remaining certification items -->
+              <!-- Certified User: VR Developer -->
+
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- <div class="card">
+        <div class="card-header" id="workExperienceHeading">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#workExperienceCollapse" aria-expanded="false" aria-controls="workExperienceCollapse">
+              Work Experience
+            </button>
+          </h2>
+        </div>
+        <div id="workExperienceCollapse" class="collapse" aria-labelledby="workExperienceHeading" data-parent="#accordionSections">
+          <div class="card-body">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <h4>Software Developer - Company A</h4>
+                <p>Responsibilities: XYZ</p>
+              </li>
+              <li class="list-group-item">
+                <h4>Web Developer - Company B</h4>
+                <p>Responsibilities: XYZ</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+       -->
+      <div class="card">
+        <div class="card-header" id="contactHeading">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#contactCollapse" aria-expanded="false" aria-controls="contactCollapse">
+              Contact
+            </button>
+          </h2>
+        </div>
+        <div id="contactCollapse" class="collapse" aria-labelledby="contactHeading" data-parent="#accordionSections">
+          <div class="card-body">
+            <p>
+              If you'd like to get in touch with me, feel free to send me an email at aaravayadav@outlook.com.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-header" id="awardsHeading">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#awardsCollapse" aria-expanded="false" aria-controls="awardsCollapse">
+              Awards and Recognitions
+            </button>
+          </h2>
+        </div>
+        <div id="awardsCollapse" class="collapse" aria-labelledby="awardsHeading" data-parent="#accordionSections">
+          <div class="card-body">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="mb-0">Hackathon #1</h5>
+                  <div>
+                    <a href="https://devpost.com/hackathon1" target="_blank" class="btn btn-primary mr-2">Devpost</a>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <h5 class="mb-0">Track Award #1</h5>
+              </li>
+              <li class="list-group-item">
+                <h5 class="mb-0">Track Award #2</h5>
+              </li>
+              <li class="list-group-item">
+                <h5 class="mb-0">Track Award #3</h5>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </main>
+
+  <!-- <footer class="footer">
+    <div class="container">
+      <p>&copy; 2023 Your Website. All rights reserved.</p>
+    </div>
+  </footer> -->
+  
+  
+  <!-- Add jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Add Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Add Font Awesome JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/js/all.min.js"></script>
+
+
+</body>
+</html>
