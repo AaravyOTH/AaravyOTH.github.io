@@ -1,117 +1,50 @@
-/* Existing styles */
+/* Remove previous font import so we revert to system defaults */
 html, body {
-    height: 100%;
-    margin: 0;
-    background-color: #121212; /* Dark background for night mode */
-    color: #e0e0e0; /* Light grey text color for readability */
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-
-  }
-
-  /* Black to gold linear gradient background for sections */
-.gradient-background {
-    background: linear-gradient(145deg, #000, #a67c00, #000);
-    padding: 20px;
-    border-radius: 8px;
-  }
-
-  body {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  footer.footer {
-    margin-top: auto;
-    width: 100%;
-    background-color: #242424; /* Slightly lighter dark shade for footer */
-    text-align: center;
-    padding: 1rem 0; /* 1rem top and bottom padding */
-    color: #e0e0e0; /* Light grey text color for readability */
-  }
-  
-  /* New styles for accordion and card components */
-  .card {
-    background-color: #333; /* Dark background for cards */
-    color: #e0e0e0; /* Light grey text for readability */
-    border-color: #444; /* Slightly lighter border color for distinction */
-  }
-  
-  .card-header {
-    background-color: #222; /* Even darker shade for card headers */
-    border-bottom: 1px solid #444; /* Slightly lighter border for separation */
-  }
-  
-  .btn-link {
-    color: #b8b8b8; /* Lighter grey for buttons to stand out */
-  }
-  
-  /* Ensure the links (e.g., social media buttons) are also styled appropriately */
-  .social-media-buttons a {
-    color: #e0e0e0; /* Light grey text color for readability */
-    background-color: #333; /* Dark background for buttons */
-    border-color: #444; /* Slightly lighter border color for distinction */
-  }
-  
-  /* Adjust hover effects for interactive elements */
-  .social-media-buttons a:hover, .btn-link:hover {
-    color: #ffffff; /* Bright white on hover for higher contrast */
-    background-color: #444; /* Slightly lighter background on hover */
-  }
-  
-  /* Targeting nested cards within the accordion */
-#projectsCollapse .card,
-#unityProjectsCollapse .card,
-#vrProjectsCollapse .card {
-  background-color: #333; /* Dark background for nested cards */
-  color: #e0e0e0; /* Light grey text for readability */
-  border-color: #444; /* Slightly lighter border color for distinction */
+  height: 100%;
+  margin: 0;
+  background-color: #121212; /* Dark background for night mode */
+  color: #444;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-#projectsCollapse .card-header,
-#unityProjectsCollapse .card-header,
-#vrProjectsCollapse .card-header {
-  background-color: #222; /* Even darker shade for nested card headers */
-  border-bottom: 1px solid #444; /* Slightly lighter border for separation */
+/* Navigation link styling */
+.nav-link {
+  transition: color 0.2s ease-in-out;
+}
+.nav-link:hover {
+  color: #88D1F1;
+  transform: scale(1.03);
 }
 
-#projectsCollapse .list-group-item,
-#unityProjectsCollapse .list-group-item,
-#vrProjectsCollapse .list-group-item {
-  background-color: #333; /* Dark background for list items in nested cards */
-  border-color: #444; /* Slightly lighter border color for distinction */
-  color: #e0e0e0; /* Light grey text for readability */
+/* Project box styling override */
+.project-box {
+  background-color: #88D1F1 !important;
+  transition: transform 0.2s ease-in-out;
+}
+.project-box:hover {
+  transform: scale(1.03);
 }
 
-/* Ensuring buttons and links within nested cards fit the dark mode theme */
-#projectsCollapse .btn-link,
-#unityProjectsCollapse .btn-link,
-#vrProjectsCollapse .btn-link,
-#projectsCollapse .btn-primary,
-#unityProjectsCollapse .btn-primary,
-#vrProjectsCollapse .btn-primary {
-  color: #b8b8b8; /* Lighter grey for buttons to stand out */
+/* Override default Tailwind text for descriptions inside project boxes */
+.project-box p {
+  margin-top: 0.5rem;
+  color: black !important;
 }
 
-/* Adjust hover effects for interactive elements within nested cards */
-#projectsCollapse .btn-link:hover,
-#unityProjectsCollapse .btn-link:hover,
-#vrProjectsCollapse .btn-link:hover,
-#projectsCollapse .btn-primary:hover,
-#unityProjectsCollapse .btn-primary:hover,
-#vrProjectsCollapse .btn-primary:hover {
-  color: #ffffff; /* Bright white on hover for higher contrast */
-  background-color: #444; /* Slightly lighter background on hover for primary buttons */
+/* (Optional) Adjust social media and interactive element hover effects */
+.social-media-buttons a:hover,
+.btn-link:hover {
+  color: #ffffff;
+  background-color: #444;
+  transform: scale(1.03);
 }
-/* Targeting the card within the education section */
-#educationCollapse .card-body {
-    background-color: #333; /* Dark background for the card body */
-    color: #e0e0e0; /* Light grey text for readability */
-  }
-  
-  /* Targeting list items within the education section */
-  #educationCollapse .list-group-item {
-    background-color: #333; /* Dark background for list items */
-    color: #e0e0e0; /* Light grey text for readability */
-    border-color: #444; /* Slightly lighter border color for distinction */
-  }
-  
+ 
+/* Footer styling */
+footer.footer {
+  margin-top: auto;
+  width: 100%;
+  background-color: #242424;
+  text-align: center;
+  padding: 1rem 0;
+  color: #252b74;
+}
