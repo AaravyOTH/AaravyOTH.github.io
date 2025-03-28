@@ -7,17 +7,22 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="h-screen flex">
     <!-- Left Sidebar (1/3 of screen) -->
-    <aside class="w-1/3 bg-gray-800 text-white p-6 overflow-y-auto">
+    <aside class="w-1/3 bg-black-800 text-white p-6 overflow-y-auto sidebar">
       <!-- Personal Info -->
       <div class="mb-8">
         <h1 class="text-3xl font-bold">I'm Aarav Yadav</h1>
         <p class="mt-2 text-lg">Computer Science - Game Developer</p>
       </div>
-      
+
       <!-- Social Media Links -->
       <div class="mb-8">
         <h2 class="text-xl font-semibold mb-2">Find me on</h2>
@@ -30,24 +35,26 @@
           </a>
           <!-- Add additional social icons as needed -->
         </div>
-        <p class="mt-4">Email: <a href="mailto:aaravayadav@outlook.com" class="underline hover:text-blue-400">aaravayadav@outlook.com</a></p>
+        <p class="mt-4">
+          Email: <a href="mailto:aaravayadav@outlook.com" class="underline hover:text-blue-400">aaravayadav@outlook.com</a>
+        </p>
       </div>
-      
+
       <!-- Vertical Navigation -->
       <nav>
         <ul class="space-y-4">
           <li>
-            <a href="#down-to-the-wire" class="block py-2 px-4 bg-gray-700 rounded hover:bg-gray-600">
+            <a href="#down-to-the-wire" class="block py-2 px-4 bg-gray-700 rounded nav-link">
               Down To The Wire
             </a>
           </li>
           <li>
-            <a href="#websites" class="block py-2 px-4 bg-gray-700 rounded hover:bg-gray-600">
-              Rutgers Oragami Club
+            <a href="#websites" class="block py-2 px-4 bg-gray-700 rounded nav-link">
+              Rutgers Origami Club
             </a>
           </li>
           <li>
-            <a href="#android-projects" class="block py-2 px-4 bg-gray-700 rounded hover:bg-gray-600">
+            <a href="#android-projects" class="block py-2 px-4 bg-gray-700 rounded nav-link">
               Android Projects
             </a>
           </li>
@@ -56,62 +63,76 @@
     </aside>
 
     <!-- Right Content Area (2/3 of screen) -->
-    <main class="w-2/3 h-screen overflow-y-auto bg-gray-100 p-6">
-      <!-- Indie Game Section -->
+    <main class="w-2/3 h-screen overflow-y-auto bg-grey-800 p-6">
+      <!-- Down To The Wire Section -->
       <section id="down-to-the-wire" class="mb-12">
-        <h2 class="text-3xl font-bold mb-4">Down To The Wire</h2>
-        <div class="w-full max-w-4xl mx-auto">
-          <!-- Place your dtw.mp4 file here -->
-          <video controls class="w-full">
+        <h2 class="text-3xl font-bold mb-4 text-white">Down To The Wire</h2>
+        <div class="project-box p-4">
+          <video controls class="w-full mb-4">
             <source src="dtw.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
+          <p>test here</p>
         </div>
       </section>
-      
 
-      <section id="Websites">
-        <h2 class="text-3xl font-bold mb-4">Websites</h2>
-        <ul class="space-y-4">
-          <!-- Websites -->
-          <li class="p-4 bg-white shadow rounded flex items-center justify-between">
-            <span class="font-semibold">RU Oragami Club Website</span>
+      <!-- Websites Section -->
+      <section id="websites" class="mb-12">
+        <h2 class="text-3xl font-bold mb-4 text-white">Websites</h2>
+        <div class="project-box p-4 shadow rounded transform transition duration-200 hover:scale-103">
+          <div class="flex items-center justify-between mb-2">
+            <span class="font-semibold text-xl">RU Origami Club Website</span>
             <a href="https://github.com/AaravyOTH/ruoc_website" target="_blank" class="text-blue-600 hover:text-blue-800 text-2xl">
               <i class="fab fa-github"></i>
             </a>
-          </li>
-
+          </div>
+          <p>text here</p>
+        </div>
+      </section>
 
       <!-- Android Projects Section -->
-      <section id="android-projects">
-        <h2 class="text-3xl font-bold mb-4">Android Projects</h2>
+      <section id="android-projects" class="mb-12">
+        <h2 class="text-3xl font-bold mb-4 text-white">Android Projects</h2>
         <ul class="space-y-4">
           <!-- Cookie Clicker -->
-          <li class="p-4 bg-white shadow rounded flex items-center justify-between">
-            <span class="font-semibold">Cookie Clicker</span>
-            <a href="https://github.com/AaravyOTH/CookieClicker" target="_blank" class="text-blue-600 hover:text-blue-800 text-2xl">
-              <i class="fab fa-github"></i>
-            </a>
+          <li class="project-box p-4 shadow rounded transform transition duration-200 hover:scale-103">
+            <div class="flex items-center justify-between">
+              <span class="font-semibold text-xl">Cookie Clicker</span>
+              <a href="https://github.com/AaravyOTH/CookieClicker" target="_blank" class="text-blue-600 hover:text-blue-800 text-2xl">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <p class="mt-2">text here</p>
           </li>
           <!-- Weather App -->
-          <li class="p-4 bg-white shadow rounded flex items-center justify-between">
-            <span class="font-semibold">Weather App</span>
-            <a href="https://github.com/AaravyOTH/WeatherProject" target="_blank" class="text-blue-600 hover:text-blue-800 text-2xl">
-              <i class="fab fa-github"></i>
-            </a>
+          <li class="project-box p-4 shadow rounded transform transition duration-200 hover:scale-103">
+            <div class="flex items-center justify-between">
+              <span class="font-semibold text-xl">Weather App</span>
+              <a href="https://github.com/AaravyOTH/WeatherProject" target="_blank" class="text-blue-600 hover:text-blue-800 text-2xl">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <p class="mt-2">text here</p>
           </li>
           <!-- Hyrule Compendium -->
-          <li class="p-4 bg-white shadow rounded flex items-center justify-between">
-            <span class="font-semibold">Hyrule Compendium</span>
-            <a href="https://github.com/AaravyOTH/HyruleCompendium" target="_blank" class="text-blue-600 hover:text-blue-800 text-2xl">
-              <i class="fab fa-github"></i>
-            </a>
+          <li class="project-box p-4 shadow rounded transform transition duration-200 hover:scale-103">
+            <div class="flex items-center justify-between">
+              <span class="font-semibold text-xl">Hyrule Compendium</span>
+              <a href="https://github.com/AaravyOTH/HyruleCompendium" target="_blank" class="text-blue-600 hover:text-blue-800 text-2xl">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <p class="mt-2">text here</p>
           </li>
-          <li class="p-4 bg-white shadow rounded flex items-center justify-between">
-            <span class="font-semibold">GPS Distance Finder</span>
-            <a href="https://github.com/AaravyOTH/GPSDistanceCalculator/tree/master" target="_blank" class="text-blue-600 hover:text-blue-800 text-2xl">
-              <i class="fab fa-github"></i>
-            </a>
+          <!-- GPS Distance Finder -->
+          <li class="project-box p-4 shadow rounded transform transition duration-200 hover:scale-103">
+            <div class="flex items-center justify-between">
+              <span class="font-semibold text-xl">GPS Distance Finder</span>
+              <a href="https://github.com/AaravyOTH/GPSDistanceCalculator/tree/master" target="_blank" class="text-blue-600 hover:text-blue-800 text-2xl">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <p class="mt-2">text here</p>
           </li>
         </ul>
       </section>
