@@ -4,208 +4,360 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aarav Yadav</title>
-    <!-- Tailwind CSS CDN -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome for icons -->
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
     />
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body class="h-screen flex">
-    <!-- Left Sidebar (1/3 of screen) -->
-    <aside class="w-1/3 bg-black-800 text-white p-6 overflow-y-auto sidebar">
-      <!-- Personal Info -->
-      <div class="mb-8">
-        <h1 class="text-4xl font-bold">Aarav Yadav</h1>
-        <p class="mt-3 text-2xl font-semibold"> Computer Science - Game Developer - XR Developer</p>
-        <p class="mt-6 text-lg">Computer Science And Mathematics at Rutgers University</p>
-      </div>
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-      <!-- Social Media Links -->
-      <div class="mb-8">
-        <h2 class="text-xl font-semibold mb-2">Find me on</h2>
-        <div class="flex space-x-4 text-2xl">
-          <a href="https://github.com/AaravyOTH" target="_blank" class="hover:text-blue-400">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/aarav-yadav-b860b4286/" target="_blank" class="hover:text-blue-400">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <!-- Add additional social icons as needed -->
-        </div>
-        <p class="mt-4">
-          Email: <a href="mailto:aaravayadav@outlook.com" class="underline hover:text-blue-400">aaravayadav@outlook.com</a>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "portfolio-dark": "#0f172a",
+              "portfolio-darker": "#0a1120",
+              "portfolio-accent": "#3b82f6",
+              "portfolio-accent-dark": "#1d4ed8",
+            },
+            fontFamily: {
+              inter: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #0a1120;
+        background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%233b82f6' fill-opacity='0.05'%3E%3Ccircle cx='20' cy='20' r='2'/%3E%3C/g%3E%3C/svg%3E");
+      }
+      .project-box {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 0.75rem;
+        transition: all 0.3s ease;
+      }
+      .project-box:hover {
+        transform: translateY(-5px) scale(1.02);
+        border-color: #3b82f6;
+        box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+      }
+      .sidebar {
+        background: linear-gradient(180deg, #0f172a, #0a1120);
+      }
+      .nav-link {
+        transition: all 0.3s ease;
+      }
+      .nav-link:hover {
+        background-color: rgba(59, 130, 246, 0.2);
+        color: #3b82f6;
+      }
+      .active-link {
+        background-color: rgba(59, 130, 246, 0.4) !important;
+        color: white !important;
+      }
+    </style>
+  </head>
+
+  <body class="h-screen flex text-gray-200">
+    <!-- Sidebar -->
+    <aside
+      class="w-1/3 sidebar text-white p-8 overflow-y-auto shadow-xl sticky top-0 h-screen"
+    >
+      <!-- Personal Info -->
+      <div class="mb-10">
+        <h1 class="text-4xl font-bold tracking-wide">Aarav Yadav</h1>
+        <p class="mt-3 text-xl font-semibold text-gray-300">
+          Software Engineer • Game Developer • XR Developer
+        </p>
+        <p class="mt-6 text-lg text-gray-400">
+          CS and Math at Rutgers University
         </p>
       </div>
 
-      <!-- Vertical Navigation -->
+      <!-- Socials -->
+      <div class="mb-10">
+        <h2 class="text-xl font-semibold mb-3 text-gray-300">Find me on</h2>
+        <div class="flex space-x-5 text-2xl">
+          <a
+            href="https://github.com/AaravyOTH"
+            target="_blank"
+            class="hover:text-portfolio-accent"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/aarav-yadav-b860b4286/"
+            target="_blank"
+            class="hover:text-portfolio-accent"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+        <p class="mt-4 text-gray-400">
+          Email:
+          <a
+            href="mailto:aaravayadav@outlook.com"
+            class="underline hover:text-portfolio-accent"
+            >aaravayadav@outlook.com</a
+          >
+        </p>
+      </div>
+
+      <!-- Navigation -->
       <nav>
-        <ul class="space-y-4">
+        <ul class="space-y-3">
           <li>
-            <a href="#down-to-the-wire" class="block py-2 px-4 bg-gray-700 rounded nav-link">
-              Down To The Wire
-            </a>
+            <a href="#down-to-the-wire" class="block py-2 px-4 rounded nav-link"
+              >Down To The Wire</a
+            >
           </li>
           <li>
-            <a href="#vr-whiteboard" class="block py-2 px-4 bg-gray-700 rounded nav-link">
-                VR Whiteboard
-              </a>
+            <a href="#vr-whiteboard" class="block py-2 px-4 rounded nav-link"
+              >VR Whiteboard</a
+            >
           </li>
           <li>
-            <a href="#websites" class="block py-2 px-4 bg-gray-700 rounded nav-link">
-              Websites
-            </a>
+            <a href="#websites" class="block py-2 px-4 rounded nav-link"
+              >Websites</a
+            >
           </li>
           <li>
-            <a href="#projects" class="block py-2 px-4 bg-gray-700 rounded nav-link">
-              Projects
-            </a>
+            <a href="#projects" class="block py-2 px-4 rounded nav-link"
+              >Projects</a
+            >
           </li>
         </ul>
       </nav>
     </aside>
 
-    <!-- Right Content Area (2/3 of screen) -->
-    <main class="w-2/3 h-screen overflow-y-auto bg-grey-800 p-6">
-      <!-- Down To The Wire Section -->
-      <section id="down-to-the-wire" class="mb-12">
-        <h2 class="text-3xl font-bold mb-4 text-white">Down To The Wire</h2>
-        <div class="project-box p-4">
-          <video controls class="w-full mb-4">
+    <!-- Content -->
+    <main class="w-2/3 h-screen overflow-y-auto p-10">
+      <!-- Down To The Wire -->
+      <section id="down-to-the-wire" class="mb-16">
+        <h2 class="text-3xl font-bold mb-6 text-white">Down To The Wire</h2>
+        <div class="project-box p-6">
+          <video controls class="w-full mb-4 rounded-lg shadow-lg">
             <source src="dtw.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
           </video>
-          <p>Multiplayer FPS Game using the Godot Engine</p>
+          <p class="text-gray-300">
+            Multiplayer FPS Game built with Godot Engine.
+          </p>
         </div>
       </section>
-       <section id="vr-whiteboard" class="mb-12">
-          <h2 class="text-3xl font-bold mb-4 text-white">VR Whiteboard</h2>
-          <div class="project-box p-4">
-              <video controls class="w-full mb-4">
-                  <source src="vrwhiteboard.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              <p>VR Drawing and Notetaking App built in Unity</p>
+
+      <!-- VR Whiteboard -->
+      <section id="vr-whiteboard" class="mb-16">
+        <h2 class="text-3xl font-bold mb-6 text-white">VR Whiteboard</h2>
+        <div class="project-box p-6">
+          <video controls class="w-full mb-4 rounded-lg shadow-lg">
+            <source src="vrwhiteboard.mp4" type="video/mp4" />
+          </video>
+          <p class="text-gray-300">
+            VR Drawing and Notetaking App made in Unity.
+          </p>
+        </div>
+      </section>
+
+      <!-- Websites -->
+      <section id="websites" class="mb-16">
+        <h2 class="text-3xl font-bold mb-6 text-white">Websites</h2>
+        <div class="grid gap-6">
+          <div class="project-box p-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-semibold text-xl">This Portfolio Website</span>
+              <a
+                href="https://github.com/AaravyOTH/AaravyOTH"
+                target="_blank"
+                class="text-portfolio-accent hover:text-portfolio-accent-dark text-2xl"
+                ><i class="fab fa-github"></i
+              ></a>
             </div>
-        </section>
-
-
-      <!-- Websites Section -->
-      <section id="websites" class="mb-12">
-        <h2 class="text-3xl font-bold mb-4 text-white">Websites</h2>
-        <ul class="space-y-4">
-        <div class="project-box p-4 shadow rounded transform transition duration-200 hover:scale-103">
-          <div class="flex items-center justify-between mb-2">
-            <span class="font-semibold text-xl">This Portfolio Website </span>
-            <a href="https://github.com/AaravyOTH/AaravyOTH" target="_blank" class="text-blue-600 hover:text-blue-800 text-2xl">
-              <i class="fab fa-github"></i>
-            </a>
+            <p class="text-gray-300">Built with Tailwind and GitHub Pages.</p>
           </div>
-          <p>Using Github Pages and Tailwind</p>
-      </div>
-      <div class="project-box p-4 shadow rounded transform transition duration-200 hover:scale-103">
-        <div class="flex items-center justify-between mb-2">
-          <span class="font-semibold text-xl">RU Origami Club Website</span>
-          <div class="flex space-x-2">
-            <a href="https://www.ruorigamiclub.org" target="_blank" class="text-blue-600 hover:text-blue-800 text-2xl">
-              <i class="fa-solid fa-globe"></i>
-            </a>
-            <a href="https://github.com/AaravyOTH/origamiclub" target="_blank" class="text-blue-600 hover:text-blue-800 text-2xl">
-              <i class="fab fa-github"></i>
-            </a>
+
+          <div class="project-box p-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-semibold text-xl"
+                >RU Origami Club Website</span
+              >
+              <div class="flex space-x-3">
+                <a
+                  href="https://www.ruorigamiclub.org"
+                  target="_blank"
+                  class="text-portfolio-accent hover:text-portfolio-accent-dark text-2xl"
+                  ><i class="fa-solid fa-globe"></i
+                ></a>
+                <a
+                  href="https://github.com/AaravyOTH/origamiclub"
+                  target="_blank"
+                  class="text-portfolio-accent hover:text-portfolio-accent-dark text-2xl"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <p class="text-gray-300">
+              Official website for the Rutgers Origami Club.
+            </p>
           </div>
         </div>
-        <p>Website for the Rutgers Origami Club.</p>
-      </div>
-      </ul>
       </section>
 
-      <!-- Projects Section -->
-      <section id="projects" class="mb-12">
-        <h2 class="text-3xl font-bold mb-4 text-white"> Projects</h2>
-        <ul class="space-y-4">
+      <!-- Projects -->
+      <section id="projects" class="mb-16">
+        <h2 class="text-3xl font-bold mb-6 text-white">Projects</h2>
+        <ul class="grid gap-6">
           <!-- Cookie Clicker -->
-          <li class="project-box p-4 shadow rounded transform transition duration-200 hover:scale-103">
+          <li class="project-box p-6">
             <div class="flex items-center justify-between">
               <span class="font-semibold text-xl">Cookie Clicker</span>
-              <a href="https://github.com/AaravyOTH/CookieClicker" target="_blank" class="text-blue-600 hover:text-blue-800 text-2xl">
-                <i class="fab fa-github"></i>
-              </a>
+              <a
+                href="https://github.com/AaravyOTH/CookieClicker"
+                target="_blank"
+                class="text-portfolio-accent hover:text-portfolio-accent-dark text-2xl"
+                ><i class="fab fa-github"></i
+              ></a>
             </div>
-            <p class="mt-2">Android Game based on Cookie Clicker by Ortiel.</p> <p class="mt-4">
-              Reference Game: <a href="https://orteil.dashnet.org/cookieclicker/" class="underline hover:text-blue-400">https://orteil.dashnet.org/cookieclicker/</a>
+            <p class="mt-3 text-gray-300">
+              Android Game inspired by Cookie Clicker.
             </p>
           </li>
-          <!--Number System Converter-->
-          <li class="project-box p-4 shadow rounded transform transition duration-200 hover:scale-103">
+
+          <!-- C Number System Converter -->
+          <li class="project-box p-6">
             <div class="flex items-center justify-between">
               <span class="font-semibold text-xl">C Number System Converter</span>
-              <a href="https://github.com/AaravyOTH/CNumberSystemConverter" target="_blank" class="text-blue-600 hover:text-blue-800 text-2xl">
-                <i class="fab fa-github"></i>
-              </a>
+              <a
+                href="https://github.com/AaravyOTH/CNumberSystemConverter"
+                target="_blank"
+                class="text-portfolio-accent hover:text-portfolio-accent-dark text-2xl"
+                ><i class="fab fa-github"></i></a>
             </div>
-            <p class="mt-2">A program written in C that lets the user convert a number between number systems. (Binary, One's Compliment, Two's Complement, Decimal, Signed Magnitude, IEEE754 Binary, etc.)
+            <p class="mt-3 text-gray-300">
+              A program written in C that lets the user convert a number between
+              number systems. (Binary, One's Compliment, Two's Complement,
+              Decimal, Signed Magnitude, IEEE754 Binary, etc.)
             </p>
           </li>
-            <!-- 4 Bit Number Adder Circuit -->
-          <li class="project-box p-4 shadow rounded transform transition duration-200 hover:scale-103">
+
+          <!-- 4 Bit Number Counter -->
+          <li class="project-box p-6">
             <div class="flex items-center justify-between">
               <span class="font-semibold text-xl">4 Bit Number Counter</span>
-              <a href="https://circuitverse.org/users/304806/projects/4bitcounter-add6b9f1-3489-44b6-8ed4-779c10b4c54a" target="_blank" class="text-blue-600 hover:text-blue-800 text-2xl">
-                <i class="fa-solid fa-window-restore"></i>
-              </a>
+              <a
+                href="https://circuitverse.org/users/304806/projects/4bitcounter-add6b9f1-3489-44b6-8ed4-779c10b4c54a"
+                target="_blank"
+                class="text-portfolio-accent hover:text-portfolio-accent-dark text-2xl"
+                ><i class="fa-solid fa-window-restore"></i></a>
             </div>
-            <p class="mt-2">Visual Circuit of a 4 bit number counter. The LED's display how many ticks left until the timer finishes. The amount of time is set in binary using the 4 bit input. Created through Circuit Verse.
+            <p class="mt-3 text-gray-300">
+              Visual Circuit of a 4 bit number counter. The LEDs display how
+              many ticks left until the timer finishes. The amount of time is
+              set in binary using the 4 bit input. Created through Circuit Verse.
             </p>
           </li>
 
           <!-- Weather App -->
-          <li class="project-box p-4 shadow rounded transform transition duration-200 hover:scale-103">
+          <li class="project-box p-6">
             <div class="flex items-center justify-between">
               <span class="font-semibold text-xl">Weather App</span>
-              <a href="https://github.com/AaravyOTH/WeatherProject" target="_blank" class="text-blue-600 hover:text-blue-800 text-2xl">
-                <i class="fab fa-github"></i>
-              </a>
+              <a
+                href="https://github.com/AaravyOTH/WeatherProject"
+                target="_blank"
+                class="text-portfolio-accent hover:text-portfolio-accent-dark text-2xl"
+                ><i class="fab fa-github"></i></a>
             </div>
-            <p class="mt-2">Android App that allows user to find out the weather information of an inputed zipcode</p>
-          </li>
-          <!-- Hyrule Compendium -->
-          <li class="project-box p-4 shadow rounded transform transition duration-200 hover:scale-103">
-            <div class="flex items-center justify-between">
-              <span class="font-semibold text-xl">Hyrule Compendium</span>
-              <a href="https://github.com/AaravyOTH/HyruleCompendium" target="_blank" class="text-blue-600 hover:text-blue-800 text-2xl">
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
-            <p class="mt-2">Android App that Utilizes Google Firebase. Users can search for information in Nintendo's The Legend Of Zelda: Breath Of The Wild. The User can then save those searches in a firebase database, which is then called from to repopulate the already searched items on relogin</p>
-          </li>
-          <!-- GPS Distance Finder -->
-          <li class="project-box p-4 shadow rounded transform transition duration-200 hover:scale-103">
-            <div class="flex items-center justify-between">
-              <span class="font-semibold text-xl">GPS Distance Finder</span>
-              <a href="https://github.com/AaravyOTH/GPSDistanceCalculator/tree/master" target="_blank" class="text-blue-600 hover:text-blue-800 text-2xl">
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
-            <p class="mt-2">Android App that allows a user to find the distance between two locations</p>
-          </li>
-          <!-- 4 Bit Number Adder Circuit -->
-          <li class="project-box p-4 shadow rounded transform transition duration-200 hover:scale-103">
-            <div class="flex items-center justify-between">
-              <span class="font-semibold text-xl">Finite State Machine</span>
-              <a href="https://circuitverse.org/users/304806/projects/finitestatemachine"target="_blank" class="text-blue-600 hover:text-blue-800 text-2xl">
-                <i class="fa-solid fa-window-restore"></i>
-              </a>
-            </div>
-            <p class="mt-2">Visual Circuit of a Finite State Machine that tracks the value of x mod 8, updating its state based on a 1-bit input by computing the next state with a decoder and logic gates. Created through Circuit Verse.
+            <p class="mt-3 text-gray-300">
+              Android App that allows user to find out the weather information
+              of an inputted zipcode.
             </p>
           </li>
 
+          <!-- Hyrule Compendium -->
+          <li class="project-box p-6">
+            <div class="flex items-center justify-between">
+              <span class="font-semibold text-xl">Hyrule Compendium</span>
+              <a
+                href="https://github.com/AaravyOTH/HyruleCompendium"
+                target="_blank"
+                class="text-portfolio-accent hover:text-portfolio-accent-dark text-2xl"
+                ><i class="fab fa-github"></i></a>
+            </div>
+            <p class="mt-3 text-gray-300">
+              Android App that utilizes Google Firebase. Users can search for
+              information in Nintendo's The Legend Of Zelda: Breath Of The Wild.
+              The User can then save those searches in a Firebase database,
+              which is then called from to repopulate the already searched items
+              on relogin.
+            </p>
+          </li>
+
+          <!-- GPS Distance Finder -->
+          <li class="project-box p-6">
+            <div class="flex items-center justify-between">
+              <span class="font-semibold text-xl">GPS Distance Finder</span>
+              <a
+                href="https://github.com/AaravyOTH/GPSDistanceCalculator/tree/master"
+                target="_blank"
+                class="text-portfolio-accent hover:text-portfolio-accent-dark text-2xl"
+                ><i class="fab fa-github"></i></a>
+            </div>
+            <p class="mt-3 text-gray-300">
+              Android App that allows a user to find the distance between two
+              locations.
+            </p>
+          </li>
+
+          <!-- Finite State Machine -->
+          <li class="project-box p-6">
+            <div class="flex items-center justify-between">
+              <span class="font-semibold text-xl">Finite State Machine</span>
+              <a
+                href="https://circuitverse.org/users/304806/projects/finitestatemachine"
+                target="_blank"
+                class="text-portfolio-accent hover:text-portfolio-accent-dark text-2xl"
+                ><i class="fa-solid fa-window-restore"></i></a>
+            </div>
+            <p class="mt-3 text-gray-300">
+              Visual Circuit of a Finite State Machine that tracks the value of
+              x mod 8, updating its state based on a 1-bit input by computing
+              the next state with a decoder and logic gates. Created through
+              Circuit Verse.
+            </p>
+          </li>
         </ul>
       </section>
     </main>
+
+    <script>
+      // Highlight active nav link on scroll
+      window.addEventListener("scroll", () => {
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav-link");
+        let current = "";
+        sections.forEach((sec) => {
+          const top = sec.offsetTop - 100;
+          if (scrollY >= top) current = sec.id;
+        });
+        navLinks.forEach((link) => {
+          link.classList.remove("active-link");
+          if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active-link");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
+
